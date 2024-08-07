@@ -1,0 +1,22 @@
+footer {
+    background-color: green;
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
