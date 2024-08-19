@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './foot.component.css'
 })
 export class FootComponent {
-
+  
 }

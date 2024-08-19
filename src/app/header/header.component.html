@@ -1,26 +1,23 @@
 <header>
   <nav>
     <div class="topnav">
-      <!-- <a href="#" class="logo">
+      <a href="#" class="logo">
         <img src="{{ logo }}" alt="" />
-      </a> -->
-      <a class="active" href="#home">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-      <input type="text" placeholder="Trouver un livre...">
+      </a>
+      <a class="active" RouterLink="/home">Home</a>
+      <a RouterLink="/contact">Contact</a>
+      <input type="text" placeholder="Trouver un livre..." />
     </div>
   </nav>
 </header>
 
 <main>
   <div class="mybtn">
-    <button class="btn sucess" (click)="afficheForm()" *ngIf="!affiche">
+    <button id="btn" (click)="afficheForm()" *ngIf="!affiche">
       Afficher le formulaire d'enregistrement
     </button>
-    <button class="btn sucess" (click)="afficheForm()" *ngIf="affiche">
+    <button id="btn" (click)="afficheForm()" *ngIf="affiche">
       Cacher le formulaire d'enregistrement
     </button>
   </div>
-  
 </main>

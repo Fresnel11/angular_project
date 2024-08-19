@@ -7,7 +7,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
-  logo: string = '../assets/element-1.png';
+  logo: string = '../assets/logoipsum-317.svg';
   @Output() passValue = new EventEmitter<boolean>();
   affiche: boolean = false;
   afficheForm() {
@@ -15,3 +15,4 @@ export class HeaderComponent {
     this.passValue.emit(this.affiche)
   }
 }
+

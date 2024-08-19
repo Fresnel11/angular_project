@@ -8,6 +8,10 @@ import { BookComponent } from './book/book.component';
 import { HeaderComponent } from './header/header.component';
 import { FootComponent } from './foot/foot.component';
 import { BookFormComponent } from './book-form/book-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ContactComponent } from './contact/contact.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+// import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +20,15 @@ import { BookFormComponent } from './book-form/book-form.component';
     BookComponent,
     HeaderComponent,
     FootComponent,
-    BookFormComponent
+    BookFormComponent,
+    ContactComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    // FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

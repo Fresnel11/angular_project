@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { nanoid } from 'nanoid'
+import { Book } from '../book';
+import { ServiceBookService } from '../service-book.service';
+
 
 
 @Component({
@@ -10,23 +13,18 @@ import { nanoid } from 'nanoid'
 
 
 export class BookListComponent {
-  name: string = "Fresnel";
-  id: string = nanoid()
-  title: string = "";
-  author: string = "";
-  description: string = "";
-  statut: boolean = false;
+  books?: Book[];
 
-  books = [
-    {id: nanoid(), title: "Le vent", author: "Fresnel", description:"Lorem ipsum dolor sit,....", editHome: "Laha Edition", editYear: 2004, statut: "Traitée" },
-    {id: nanoid(), title: "Clean code", author: "Robert", description:"Lorem ipsum dolor sit, ....", editHome: "Laha Edition", editYear: 2004, statut: "Traitée"},
-    {id: nanoid(), title: "Le programmeur", author: "Jean-Claude", description:"Lorem ipsum dolor sit,...", editHome: "Laha Edition", editYear: 2004, statut: "Traitée"},
-    {id: nanoid(), title: "Demon slayer", author: "Tomioka", description:"Lorem ipsum dolor sit,...", editHome: "Laha Edition", editYear: 2004, statut: "Traitée"},
-    {id: nanoid(), title: "Kimetsu no Yaiba", author: "Tandjiro", description:"Lorem ipsum dolor sit,...", editHome: "Laha Edition", editYear: 2004, statut: "Traitée"},
-  ]
+  constructor(private BookService: ServiceBookService){}
 
+  ngOnInit(): void {
+    this.books = this.BookService.getBooks();
+  }
   // addBook(){
   // this.books.push({id, title })
   // }
+  descriptionView(){
+    alert("Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, possimus maxime cupiditate vitae in et aperiam fugit dolor unde cumque aspernatur necessitatibus animi hic suscipit quasi illo soluta illum voluptates Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam exercitationem odit fugiat perferendis quae cupiditate, beatae sequi harum? Mollitia commodi voluptatem accusantium quibusdam dolorum cupiditate, ex vel. Accusamus, quas ullam")
+  }
 }
 

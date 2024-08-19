@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { nanoid } from 'nanoid';
+import { FormGroup, FormControl } from "@angular/forms";
 
 @Component({
   selector: 'app-book-form',
@@ -8,17 +8,17 @@ import { nanoid } from 'nanoid';
 })
 export class BookFormComponent {
   @Input() affiche!: boolean;
-  id: string = nanoid();
-  title: string = '';
-  author: string = "";
-  editHome: string= "";
-  editYear: string= "";
-  description: string = "";
-  statut: boolean = false;
+ 
 
-  setValue() {
-    this.title = 'Nancy';
-    this
+  
+  inputForm = new FormGroup({
+    title: new FormControl(''),
+    author: new FormControl(''),
+    description: new FormControl(''),
+    editHome: new FormControl(''),
+    editYear: new FormControl(''),
+    statut: new FormControl('')
+  })
 
-  }
+
 }
